@@ -48,7 +48,7 @@ Compile and run the file:
 ```bash
 g++ "imolement daynamic array.cpp" -o dynamic_array && ./dynamic_array
 
-
+---
 # 📋 Singly Linked List in C++
 
 ## 📌 Description
@@ -82,6 +82,7 @@ To compile and run the singly linked list implementation:
 ```bash
 g++ "implement singly linked list.cpp" -o sll && ./sll
 
+---
 
 # 🧱 Stack (Using Array) in C++
 
