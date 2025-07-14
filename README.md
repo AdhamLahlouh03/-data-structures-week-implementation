@@ -45,7 +45,6 @@ A resizable array that dynamically expands when it reaches full capacity. Suppor
 
 ### ▶️ How to Run Tests
 Compile and run the file:
-```bash
 g++ "imolement daynamic array.cpp" -o dynamic_array && ./dynamic_array
 
 ---
@@ -79,7 +78,6 @@ A linear dynamic data structure consisting of nodes, where each node points to t
 
 To compile and run the singly linked list implementation:
 
-```bash
 g++ "implement singly linked list.cpp" -o sll && ./sll
 
 ---
@@ -114,7 +112,6 @@ A stack implemented using a dynamically resizing array. It follows the LIFO (Las
 
 To compile and run the stack implementation using arrays:
 
-```bash
 g++ "imolement Stack using array.cpp" -o stack_array && ./stack_array
 
 # 🧱 Stack (Using Linked List) in C++
@@ -147,5 +144,4 @@ A stack implemented using a singly linked list, where all stack operations are p
 
 To compile and run the stack implementation using a linked list:
 
-```bash
 g++ "implement stack using linked list.cpp" -o stack_list && ./stack_list
