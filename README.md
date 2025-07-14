@@ -7,7 +7,7 @@ This repository contains implementations of fundamental data structures in C++:
 - ✅ Stack (using Array)
 - ✅ Stack (using Linked List)
 
-Each structure is implemented manually without STL, demonstrating understanding of memory management, dynamic resizing, and pointer manipulation.
+Each structure is implemented manually without using STL, with emphasis on understanding of dynamic memory allocation, pointer manipulation, and algorithmic behavior.
 
 ---
 
@@ -21,54 +21,39 @@ Each structure is implemented manually without STL, demonstrating understanding 
 - ├── implement stack using linked list.cpp
 - └── README.md
 
-
+  
 ---
 
 ## 🔹 1. Dynamic Array
 
-### Description
-A resizable array that automatically expands its capacity when full. Supports insertion at start, end, or index, as well as deletion and searching.
+### 📌 Description
+A resizable array that dynamically expands when it reaches full capacity. Supports insertion at the beginning, end, or any index, along with deletion and searching operations.
 
-### Operations
-- `addToFirst(value)`
-- `addToLast(value)`
-- `addToIndex(index, value)`
-- `removeFromFirst()`, `romoveLast()`, `removeByIndex(index)`
-- `updateElement(index, value)`
-- `search(value)`, `clear()`, `shrink_to_fit()`
+### ⏱️ Time & Space Complexity
 
-### Time & Space Complexity
 | Operation            | Time         | Space |
 |----------------------|--------------|--------|
-| Add (end/start/index)| O(1)/O(n)    | O(n)   |
+| Add (end/start/index)| O(1) / O(n)  | O(n)   |
 | Remove               | O(n)         | O(n)   |
 | Search / Update      | O(n)         | O(n)   |
 
-### Example
-```cpp
-ArrayList<int> myList;
-myList.addToLast(10);
-myList.addToFirst(5);
-myList.addToIndex(1, 15);
-myList.print();  // Output: 5 15 10
+### 🧪 Usage Examples
+- Insert elements at different positions.
+- Remove elements from start, end, or by index.
+- Search and update values.
+- Print the array contents.
+
+### ▶️ How to Run Tests
+Compile and run the file:
+```bash
+g++ "imolement daynamic array.cpp" -o dynamic_array && ./dynamic_array
+
 
 # 📋 Singly Linked List in C++
 
 ## 📌 Description
-A singly linked list is a dynamic data structure made up of nodes, where each node contains data and a pointer to the next node in the sequence. It is efficient for insertions and deletions, especially at the beginning or end.
 
----
-
-## 🔧 Operations
-
-- `addAtBegining(value)` – Add a new node at the beginning.
-- `addToLast(value)` – Add a new node at the end.
-- `addAfter(existingValue, newValue)` – Add a node after a specific node.
-- `addBefore(existingValue, newValue)` – Add a node before a specific node.
-- `deleteFromBeginning()` – Remove the first node.
-- `deleteFromEnd()` – Remove the last node.
-- `search(value)` – Search for a node with a specific value.
-- `print()` – Display all elements in the list.
+A linear dynamic data structure consisting of nodes, where each node points to the next. It supports efficient insertion and deletion operations, especially at the beginning or end of the list. This makes it suitable for scenarios where frequent modifications of the list are needed.
 
 ---
 
@@ -80,26 +65,62 @@ A singly linked list is a dynamic data structure made up of nodes, where each no
 | Search           | O(n)             | O(n)             |
 
 ---
-- Stack<int> s;
-- s.push(10);
-- s.push(20);
-- s.pop();
-- s.print();
+
+## 🧪 Usage Examples
+
+- Add elements at the beginning or end.
+- Insert a new element after or before a specific value.
+- Delete elements from the start or end of the list.
+- Search for an element and print the contents of the list.
+
+---
+
+## ▶️ How to Run Tests
+
+To compile and run the singly linked list implementation:
+
+```bash
+g++ "implement singly linked list.cpp" -o sll && ./sll
+
+
+# 🧱 Stack (Using Array) in C++
+
+## 📌 Description
+
+A stack implemented using a dynamically resizing array. It follows the LIFO (Last-In, First-Out) principle, where the most recently added element is the first to be removed. When the array becomes full, its capacity is doubled automatically to accommodate more elements.
+
+---
+
+## ⏱️ Time & Space Complexity
+
+| Operation | Time Complexity     | Space Complexity |
+|-----------|---------------------|------------------|
+| Push      | O(1) (amortized)    | O(n)             |
+| Pop       | O(1)                | O(n)             |
+| Print     | O(n)                | O(n)             |
+
+---
+
+## 🧪 Usage Examples
+
+- Push multiple elements to the stack.
+- Pop the top element from the stack.
+- Display all elements in the stack from top to bottom.
+
+---
+
+## ▶️ How to Run Tests
+
+To compile and run the stack implementation using arrays:
+
+```bash
+g++ "imolement Stack using array.cpp" -o stack_array && ./stack_array
 
 # 🧱 Stack (Using Linked List) in C++
 
 ## 📌 Description
-A stack is a Last-In-First-Out (LIFO) data structure. This implementation uses a **singly linked list** where new elements are pushed to the head of the list, allowing efficient `O(1)` time complexity for core operations.
 
----
-
-## 🔧 Operations
-
-- `push(value)` – Add element to the top of the stack.
-- `Pop()` – Remove and return the top element.
-- `Top()` – Return the top element without removing it.
-- `isEmpty()` – Check if the stack is empty.
-- `getSize()` – Return the number of elements in the stack.
+A stack implemented using a singly linked list, where all stack operations are performed at the head of the list. This approach ensures constant time operations for push, pop, and access to the top element. The stack follows the LIFO (Last-In, First-Out) principle.
 
 ---
 
@@ -112,8 +133,18 @@ A stack is a Last-In-First-Out (LIFO) data structure. This implementation uses a
 | Top       | O(1)             | O(n)             |
 
 ---
-- Stack<int> stk;
-- stk.push(5);
-- stk.push(10);
-- cout << stk.Top();  // Output: 10
-- stk.Pop();
+
+## 🧪 Usage Examples
+
+- Push and pop elements from the stack.
+- Access the top element using `Top()`.
+- Use `isEmpty()` to check whether the stack contains elements.
+
+---
+
+## ▶️ How to Run Tests
+
+To compile and run the stack implementation using a linked list:
+
+```bash
+g++ "implement stack using linked list.cpp" -o stack_list && ./stack_list
